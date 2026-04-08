@@ -96,7 +96,7 @@ export const EscalationConfig = <T extends FieldValues>({
 									fieldLabel="Delay (minutes)"
 									type="number"
 									value={value || ""}
-									onChange={onChange}
+									onChange={(e) => onChange(Number((e.target as HTMLInputElement).value))}
 									inputProps={{ min: 1, max: 1440 }}
 									fullWidth
 									size="small"
